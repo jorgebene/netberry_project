@@ -1,0 +1,33 @@
+@if(loading === false) {
+    <h1 class="text-3xl font-bold text-center mt-5">Marvel Heroes</h1>
+    <div class="flex flex-row">
+        <div class="ml-5 w-full">
+            <button 
+                class="
+                    transition ease-in-out
+                    delay-150 hover:-translate-y-1 
+                    hover:scale-110 hover:bg-blue-200
+                    bg-blue-300 duration-300 
+                    text-black font-medium 
+                    pb-2 pr-3 pl-4 pt-3 shadow-lg rounded-lg"
+                (click)="createHeroe()">
+                    <div class="flex flex-row mt-1">
+                        <div>
+                            Crear héroe
+                        </div>
+                        <div class="ml-1">
+                            <mat-icon>add</mat-icon>
+                        </div>
+                    </div>
+            </button>
+        </div>
+        <div class="text-right mr-5">
+            <app-search-input (change)="onInputChange($event)"></app-search-input>
+        </div>
+    </div>
+    <div class="m-5">
+        <app-table (load)="loadHeroes($event)" [heroes]="heroesList"></app-table>
+    </div>
+}@else {
+    <app-loader></app-loader>
+}

@@ -1,0 +1,61 @@
+<div>
+    <h1 class="text-3xl font-bold text-center mt-5">
+        @if(edit) {
+            Editar héroe
+        }@else {
+            Crear héroe
+        }
+    </h1>
+</div>
+<div class="text-center">
+    <div class="shadow-lg w-4/6 m-auto rounded-lg border-t border-y-gray-50 mt-10">
+        <div class="flex flex-col m-10">
+            <form class="flex flex-col m-10" [formGroup]="heroeForm">
+                <mat-form-field>
+                    <mat-label>Nombre</mat-label>
+                    <input matInput formControlName="nombre" #nombre>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Alias</mat-label>
+                    <input matInput formControlName="alias" #alias>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Habilidades</mat-label>
+                    <input matInput formControlName="habilidades" #habilidades>
+                </mat-form-field>
+                <div class="flex flex-row mb-3 mt-3">
+                    <div class="text-left w-full">
+                        <button 
+                            class="
+                                transition ease-in-out
+                                delay-150 hover:-translate-y-1 
+                                hover:scale-110 hover:bg-blue-200
+                                bg-blue-300 duration-300 p-2 pl-4 pr-4 rounded-lg
+                                shadow-lg text-center cursor-pointer"
+                            (click)="edit ? 
+                                editHeroe(nombre.value, alias.value, habilidades.value) : 
+                                createHeroe(nombre.value, alias.value, habilidades.value)">
+                            @if(edit) {
+                                Editar
+                            }@else {
+                                Crear
+                            }
+                        </button>
+                    </div>
+                    <div class="text-right">
+                        <button 
+                            class="
+                                transition ease-in-out
+                                delay-150 hover:-translate-y-1 
+                                hover:scale-110 hover:bg-red-200
+                                bg-red-300 duration-300 p-2 pl-4 pr-4 rounded-lg
+                                shadow-lg text-center cursor-pointer"
+                            (click)="back()">
+                            Volver
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

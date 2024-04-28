@@ -1,0 +1,30 @@
+<h2 mat-dialog-title class="text-center">Eliminar héroe</h2>
+<mat-dialog-content>Deseas eliminar de forma permanente el héroe?</mat-dialog-content>
+<mat-dialog-actions>
+    <div class="flex flex-row w-full">
+        <div class="w-full">
+            <button 
+                class="
+                    transition ease-in-out
+                    delay-150 hover:-translate-y-1 
+                    hover:scale-110 hover:bg-red-200
+                    bg-red-300 duration-300 p-2 rounded-lg
+                    shadow-lg text-center cursor-pointer"
+                (click)="delete()">
+                Eliminar
+            </button>
+        </div>
+        <div class="text-right">
+            <button 
+                class="
+                    transition ease-in-out
+                    delay-150 hover:-translate-y-1 
+                    hover:scale-110 hover:bg-blue-200
+                    bg-blue-300 duration-300 p-2 rounded-lg 
+                    shadow-lg text-center cursor-pointer"
+                (click)="close()">
+                Cerrar
+            </button>
+        </div>
+    </div>
+</mat-dialog-actions>
