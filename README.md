@@ -18,6 +18,9 @@ Para poner en marcha el backend, utiliza los siguientes comandos dependiendo de 
 
 ### Frontend
 
+!!AVISO!!
+Hay que inicializar primero el backend para poder mostrar el contenido del proyecto de Angular.
+
 Para iniciar el frontend, sigue estas instrucciones basadas en tu sistema operativo:
 
 - **Linux/MacOS**:
