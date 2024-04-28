@@ -1,11 +1,11 @@
 import {AfterViewInit, ChangeDetectionStrategy, Component, EventEmitter, Input, Output, SimpleChanges, ViewChild} from '@angular/core';
 import {MatSort, MatSortModule} from '@angular/material/sort';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
-import { Heroe } from '../../core/api/models';
+import { Heroe } from '../../api/models';
 import { TitleCasePipe } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialog } from '@angular/material/dialog';
-import { DeleteComponent } from '../../pages/heroes/delete/delete.component';
+import { DeleteComponent } from '../../../pages/heroes/delete/delete.component';
 import { Router } from '@angular/router';
 
 @Component({
